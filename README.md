@@ -5,14 +5,11 @@ Have you ever seen websites that compiles lists of their favorite movies rank in
 This project will work similar to those movie rank website with the help from Flask/SQLite/HTML/Python/CSS/Javascript (from Boostrap 5).
 
 
-
-
-
-
 ![一一 2022-09-09 12 28 27 (1)](https://user-images.githubusercontent.com/95515518/188489663-4747e568-5804-4f71-aed9-0bf9b2b47917.gif)
 
 
-
+This is the brief introudction about this project on Youtube:
+https://www.youtube.com/watch?v=wBSu5Qp3DN8
 
 
 # Home-Page
