@@ -1,0 +1,14 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}Error Page {% endblock %}
+
+{% block content %}
+        <div class="content">
+            <p class="description">This Movie is already in the list. Try again</p>
+            <p>
+            <a href="http://127.0.0.1:5000">Go Back to Home Page</a>
+            </p>
+        </div>
+{% endblock %}
