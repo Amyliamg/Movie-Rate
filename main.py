@@ -50,14 +50,25 @@ class Movie(db.Model):
 # The rank for all the movies needs to follow ascending order by its movie rating(decided by user)
 @app.route("/",methods=["POST","GET"])
 def home():
+    return render_template("index.html")
+
+@app.route("/feedback",methods=["POST","GET"])
+def feedback():
+    return render_template("feedback.html")
+
+
+@app.route("/mainpage",methods=["POST","GET"])
+def mainpage():
     movies_list = db.session.query(Movie).order_by(Movie.rating).all()     #get the list with order by movie rating
     movies_list = list(movies_list)[::-1]
-    print(f"home() -> all movies DB: {movies_list}")    #check whether API works
+    print(f"mainpage() -> all movies DB: {movies_list}")    #check whether API works
     for i in range(len(movies_list)): # Give ranking numbers for all movies in the list
         num = i +1
         movies_list[i].ranking = num
     db.session.commit() #revisit the dataset
-    return render_template("index.html", movie_list=movies_list)
+    return render_template("mainpage.html", movie_list=movies_list)
+
+
 
 ## First form for adding new movie title to database
 class addFindForm(FlaskForm):
@@ -101,7 +112,7 @@ def rate_movie():
         if form.review.data:  #if user enters new review, then I changes the review
             movie_update.review = form.review.data
         db.session.commit()
-        return redirect(url_for('home'))
+        return redirect(url_for('mainpage'))
     return render_template("edit.html", movie=movie_update, form=form)
 
 
@@ -114,7 +125,7 @@ def delete_movie():
     db.session.delete(movie_name)
     db.session.commit()
     check.pop(int(movie_id)-1)
-    return redirect(url_for("home"))
+    return redirect(url_for("mainpage"))
 
 @app.route("/clean")
 def clean():
@@ -122,7 +133,7 @@ def clean():
     db.session.commit()
     while check:
         check.pop()
-    return redirect(url_for("home"))
+    return redirect(url_for("mainpage"))
 
 
 # Based on user's input and API, I am able to guess what is the name of the movie you are looking at :)

@@ -1,10 +1,11 @@
 {% extends 'bootstrap/base.html' %}
 {% import "bootstrap/wtf.html" as wtf %}
 
+
 {% block styles %}
   {{ super() }}
 <style>  body {
-	 background-color: #EAF6F6;
+	 background-color: white;
 }</style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
@@ -16,11 +17,12 @@
 {% block content %}
 <body background="#EAF6F6">
 <div class="container">
-    <h1 class="heading">Select Movie</h1>
-
+    <h1 style=" color:black"  class = "text-center" >Select Movie</h1>
+<br>
     {% for movie in options: %}
   <p>
-    <a href="{{ url_for('find_movie', id=movie.id) }} ">{{ movie.title }} - {{movie.release_date}}</a>
+
+    <a style=" color:black" href="{{ url_for('find_movie', id=movie.id) }} ">{{ movie.title }} - {{movie.release_date}}</a>
   </p>
   {% endfor %}
 

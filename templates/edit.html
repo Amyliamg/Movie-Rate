@@ -4,34 +4,9 @@
 {% block styles %}
   {{ super() }}
   <style>  body {
-	 background-color: #EAF6F6;
+	 background-color: white;
 }
-div {
-	 margin-left: 0.5rem;
-	 margin-right: 3rem;
-	 font-weight: 600;
-	 font-size: 1.8rem;
-	 letter-spacing: 0.1ch;
-	 line-height: 1.6;
-	 padding-bottom: 1em;
-	 margin-bottom: 2rem;
-}
-h1 {
-	 margin-left: 0.5rem;
-	 font-weight: 600;
-	 font-size: 3.5rem;
-	 text-transform: uppercase;
-	 letter-spacing: 0.1ch;
-	 line-height: 1.6;
-	 padding-bottom: 0.5em;
-	 margin-bottom: 2rem;
-}
-.btn.btn-success {
-    width:120px;
-    height:50px;
-    font-size:20px;
-    margin-top: 20px;
-}
+
 
 </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700"
@@ -44,9 +19,10 @@ h1 {
 {% block title %}Edit Movies{% endblock %}
 
 {% block content %}
-        <div class="content">
-            <h1 class="heading">{{ movie.title }} (edit)</h1>
-            <p class="description">{{ wtf.quick_form(form) }}</p>
+        <div class="left">
+            <h1 style=" color:black"  class = "text-center">Movie Name: {{ movie.title }} </h1>
+            <p class="left description ">{{ wtf.quick_form(form) }}</p>
         </div>
+
 
 {% endblock %}

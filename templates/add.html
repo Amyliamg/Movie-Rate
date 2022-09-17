@@ -6,8 +6,30 @@
 {% block styles %}
 {{ super() }}
 <style>  body {
-	 background-color: #EAF6F6;
+	 background-color: white;
 }
+div {
+	 margin-left: 0.5rem;
+	 margin-right: 3rem;
+	 font-weight: 600;
+	 font-size: 1.8rem;
+	 letter-spacing: 0.1ch;
+	 line-height: 1.6;
+	 padding-bottom: 1em;
+	 margin-bottom: 2rem;
+}
+h1 {
+	 margin-left: 0.5rem;
+	 font-weight: 600;
+	 font-size: 3.5rem;
+	 text-transform: uppercase;
+	 letter-spacing: 0.1ch;
+	 line-height: 1.6;
+	 padding-bottom: 0.5em;
+	 margin-bottom: 2rem;
+}
+
+
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
@@ -19,10 +41,10 @@
 {% block title %}Add Movie{% endblock %}
 
 {% block content %}
-<div class="content">
-    <h1 class="heading">Add a Movie</h1>
-
-    {{ wtf.quick_form(form, novalidate=True) }}
+<div class="left">
+    <h1 class = "text-center" style=" color:black">Add a Movie</h1>
+    <p style=" color:black"> {{ wtf.quick_form(form, novalidate=True) }} </p>
 
 </div>
+
 {% endblock %}

@@ -3,50 +3,55 @@
 
 {% block styles %}
 {{ super() }}
+<style>
+.backphoto{
+	background: linear-gradient(rgba(0,0,0,0.5),black ),url(static/images/bg.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+
+</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"/>
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}">
+
+
 {% endblock %}
 
 {% block title %}My Top 10 Movies{% endblock %}
-
 {% block content %}
-<div class="container">
-    <h1 class="heading">🎬 My Top Movies</h1>
-    <p class="description">The below is the top movie lists.</p>
-    {%for movie in movie_list%}
-            <div class="card">
-                <div class="front" style="background-image: url('{{movie.img_url}}');">
-                    <p class="large">{{movie.ranking}}</p>
-                </div>
-                <div class="back">
-                    <div>
-                <div class="title">{{movie.title}} <span class="release_date">({{movie.year}})</span></div>
-                    <div class="rating">
-                        <label>{{movie.rating}}</label>
-                        <i class="fas fa-star star"></i>
-                    </div>
-                    <p class="review">"{{movie.review}}"</p>
-                    <p class="overview">{{movie.description}}</p>
-                    <!-- <a href="#" class="button">Update</a> -->
-                    <a href="{{ url_for('rate_movie', id=movie.id) }}" class="button">Update</a>
-                    <a href="{{ url_for('delete_movie', id=movie.id) }}" class="button delete-button">Delete</a>
-                </div>
-                </div>
+
+
+<div class="wrapper backphoto">
+
+			<nav class="navbar">
+
+				<ul>
+
+					<li><a class="active" href="#">Home</a></li>
+
+					<li><a href="feedback">Feedback</a></li>
+				</ul>
+			</nav>
+
+
+			<div class="center">
+			<h1>Welcome to the Site</h1>
+			<h3>Click the Button to create your webpage :) </h3>
+            <br>
+				<br>
+				<h3><a class = "buttonnew " href="mainpage">start</a></h3>
             </div>
-     {%endfor%}
-     </div>
 
 
-<div class="container text-center add">
-<a href="{{ url_for('add') }}" class="button">Add Movie</a>
-<a href="{{ url_for('clean') }}" class="button delete-button">Clean Lists</a>
 </div>
+
+
 {% endblock %}
 
 
