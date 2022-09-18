@@ -24,7 +24,7 @@ If you want to give me any feedback, you could also click the "feedback" at the 
 When you click start, you will be sent to the project home page.
 You have three functions.
 
-<b>Add Movies:</b>
+<b>1. Add Movies:</b>
 
 ![Screen Recording 2022-09-16 at 11 55 22 PM_1663387316485100](https://user-images.githubusercontent.com/95515518/190887621-84917f03-2ae2-4dfb-9a75-266200fe4a3c.gif)
 
@@ -37,14 +37,16 @@ By clicking this button, users could add new movies to the current page
 <strong>Step3.</strong> After selecting the movie, you could now input comments and also rating to that movie
 
 <strong>Step4.</strong> Congrad! You have just added the first movie in the list!
+<hr>
 
-
-<b>Clean Movies:</b>
+<b>2. Clean Movies:</b>
 By clicking this button, users could clean up all the movies in the list
 
 ![CleanAll](https://user-images.githubusercontent.com/95515518/190887257-59b44bcb-325c-410b-8217-c9d3fb8230fb.gif)
 
-<b>Back to Home Page:</b>
+<hr>
+
+<b>3. Back to Home Page:</b>
 By clicking this button, users will go back to the welcoming page without removing their data 
 
 ![Screen Recording 2022-09-16 at 11 55 43 PM_1663387192042177](https://user-images.githubusercontent.com/95515518/190887251-ed33b5af-91e8-4132-87cf-954f77c56105.gif)
