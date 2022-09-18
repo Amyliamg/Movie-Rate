@@ -5,7 +5,7 @@ Have you ever seen websites that compiles lists of their favorite movies rank in
 This project will work similar to those movie rank website with the help from Flask/SQLite/HTML/Python/CSS/Javascript (from Boostrap 5).
 
 
-![一一 2022-09-09 12 28 27 (1)](https://user-images.githubusercontent.com/95515518/188489663-4747e568-5804-4f71-aed9-0bf9b2b47917.gif)
+![Overview](https://user-images.githubusercontent.com/95515518/190886637-90578546-8bc7-4b04-8d96-641c677c3b62.gif)
 
 
 This is the brief introudction about this project on Youtube:
@@ -15,8 +15,12 @@ https://www.youtube.com/watch?v=wBSu5Qp3DN8
 # Home-Page
 The home page looks like this:
 
-<img width="1016" alt="Screen Shot 2022-09-05 at 11 39 36 AM" src="https://user-images.githubusercontent.com/95515518/188483855-e818e582-998b-4706-b47c-d6736a2410e8.png">
 
+https://user-images.githubusercontent.com/95515518/190886716-399eb279-d149-4798-95b1-352f2be519da.mov
+
+
+
+# Click-Start -> Project Home Page
 <b>Add Movies:</b>
 By clicking this button, users could add new movies to the current page
 
